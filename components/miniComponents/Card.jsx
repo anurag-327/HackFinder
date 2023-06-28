@@ -8,7 +8,21 @@ const Card = ({data}) => {
     whileInView="visible"
     viewport={{ once: true }}
     className="z-10 flex flex-col min-h-[300px] shadow-md shadow-gray-200  mx-auto  justify-center items-center text-black rounded-md md:gap-5 bg-slate-200 p-4 md:flex-row w-[85%] md:w-[85%]">
-        <Image className={`${data.reverse&&"md:order-2"} rounded-md`} src={data.image} width={400} height={400} alt={data.title} />
+        {
+            data.id==1&&<Image className={`${data.reverse&&"md:order-2"} rounded-md`} src="/FindNextHackathon.png" width={400} height={400} alt={data.title} />
+        }
+        {
+            data.id==2&&<Image className={`${data.reverse&&"md:order-2"} rounded-md`} src="/GrowSkills.jpg" width={400} height={400} alt={data.title} />
+        }
+        {
+            data.id==3&&<Image className={`${data.reverse&&"md:order-2"} rounded-md`} src="/StayInformed.jpg" width={400} height={400} alt={data.title} />
+        }
+        {
+            data.id==4&&<Image className={`${data.reverse&&"md:order-2"} rounded-md`} src="/JoinCommunity.jpg" width={400} height={400} alt={data.title} />
+        }
+        {
+            data.id==5&&<Image className={`${data.reverse&&"md:order-2"} rounded-md`} src="/Contribute.jpg" width={400} height={400} alt={data.title} />
+        }
         <div className={`${data.reverse&&"md:order-1"} p-2 flex flex-col`}>
             <h2 className="text-3xl font-bold text-center md:text-5xl">{data.title}</h2>
             <p className="mt-4 text-lg font-semibold text-justify text-gray-800 first-letter:text-3xl xl:px-10 ">{data.description}</p>
