@@ -14,7 +14,7 @@ HackFinder is a powerful platform that allows students and tech enthusiasts to f
 
 ## Get Started
 
-1.  Clone the repository: `git clone https://github.com/your-username/hackfinder.git`
+1.  Clone the repository: `https://github.com/anurag-327/HackFinder.git`
 2.  Install dependencies: `npm install`
 3.  Run the application: `npm start`
 4.  Access HackFinder on your preferred browser at `http://localhost:3000`
