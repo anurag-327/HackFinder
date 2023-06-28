@@ -80,7 +80,7 @@ const ContributionForm = () => {
     <div className="px-1 py-4 flex flex-col justify-center items-center bg-white text-black mx-auto mt-2 z-40 md:w-[508px] max-w-[90%] gap-1 w-[390px] rounded-b-md">
         <Toaster reverseOrder position="top-right" />
         <h2 className="md:font-semibold md:text-2xl">Fill out form below</h2>
-        <form id="form"  onSubmit={handleSubmit(handleData)} className="md:w-[80%]">
+        <form id="form"  onSubmit={handleSubmit(handleData)} className="md:w-[80%] w-[95%]">
                 <div className="mt-2">
                     <label className="text-sm text-gray-600 dark:text-white" htmlFor="title">Title{errors.title && <span className="ml-2 text-sm font-semibold text-red-500">Required*</span>}</label>
                     <input id="title" {...register("title",{required:true})} className="w-full p-2 border-2 rounded-md outline-none resize-none focus:border-2 focus:rounded-md focus:border-purple-400" type="text" ></input>     
@@ -99,7 +99,7 @@ const ContributionForm = () => {
                 </div> 
                 <div>
                     <label className="text-sm text-gray-600 dark:text-white" htmlFor="tags">Tags</label>
-                    <div className="flex gap-2">
+                    <div className="flex flex-col gap-2 md:flex-row">
                         <input value={data} onChange={(e) => setData(e.target.value)} type="text" id="tags" className="w-full p-2 border-2 rounded-md outline-none resize-none focus:border-2 focus:rounded-md focus:border-purple-400" placeholder=""/>
                         <button type="button" onClick={addTags} className="p-2 border-2 rounded-md outline-none resize-none focus:border-2 focus:rounded-md focus:border-purple-400">Add</button>
                     </div>
