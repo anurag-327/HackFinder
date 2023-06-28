@@ -26,14 +26,10 @@ export default function Header()
             resetUser();
         }
     }
-    useEffect(() =>
-    {  
-        //  console.log(router.pathname)
-    },[])
     return(
         <nav className="sticky top-0 z-20 flex items-center bg-[#050b13] justify-between gap-2 md:px-3">
             <div className="flex items-center justify-center gap-2">
-                <Image src="/HackFinderLogo.png" width={50} height={40} alt="HackFinder"  className="rounded-full"/>
+                <Image src="/logo.png" width={50} height={40} alt="HackFinder"  className="rounded-full"/>
                 <h2 className="hidden font-semibold font-poppins md:block">HackFinder</h2>
             </div>
             <List onClick={openDrawer} className="cursor-pointer navList md:hidden" size={40} weight="bold" fil="#fffffff"/>
