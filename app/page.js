@@ -3,12 +3,12 @@ import Header from "@/components/Header";
 import Banner from "@/components/Banner";
 import Card from "@/components/miniComponents/Card";
 import banner2 from "@/public/banner2.jpg"
-import card1 from "@/public/FindNextHackathon1.png"
-import card2 from "@/public/GrowSkills.jpg"
-import card3 from "@/public/StayInformed.jpg"
-import card4 from "@/public/JoinCommunity.jpg"
-import card5 from "@/public/Contribute.jpg"
-import FAQ from "@/components/FAQ";
+import card1 from "../public/FindNextHackathon1.png"
+import card2 from "../public/GrowSkills.jpg"
+import card3 from "../public/StayInformed.jpg"
+import card4 from "../public/JoinCommunity.jpg"
+import card5 from "../public/Contribute.jpg"
+import FAQ from "../components/FAQ";
 export default function Home()
 {
    const FindnextHackathon={
