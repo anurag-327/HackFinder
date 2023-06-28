@@ -4,7 +4,6 @@
 /node_modules
 /.pnp
 .pnp.js
-
 # testing
 /coverage
 
@@ -29,7 +28,8 @@ yarn-error.log*
 
 # vercel
 .vercel
-/supabse/variables.js
+/supabase/variables.js
+/next.config.js
 # typescript
 *.tsbuildinfo
 next-env.d.ts
