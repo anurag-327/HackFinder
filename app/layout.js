@@ -20,7 +20,7 @@ export default function RootLayout({ children })
             const value1 = await supabase.auth.getUser()
             setUser(value1.data.user)
             const value2 = await supabase.auth.getSession();
-            console.log(value1.data.user)
+            // console.log(value1.data.user)
             setSession(value2.data.session)
             const { data, error } = await supabase
                     .from('Hackathons')

@@ -1,13 +1,14 @@
 "use client"
 import { UserCircle,NotePencil,Warning } from "phosphor-react"
-import OTPInput, { ResendOTP } from "otp-input-react";
+// import OTPInput, { ResendOTP } from "otp-input-react";
+import OtpInput from 'react-otp-input';
 import { useState,useEffect } from "react";
 import { useStore } from "@/lib/useStore";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/supabase/supabseconfig";
 import Loader from "@/components/Loader";
 import { useSearchParams } from "next/navigation";
-export default function SignUp()
+export default function VerifyEmailAddress()
 {
     const router=useRouter();
     const searchParams = useSearchParams()
@@ -19,8 +20,7 @@ export default function SignUp()
     useEffect(()=>
     {
         if(user==null)
-           router.push("/signup")
-        console.log(user)   
+           router.push("/signup")   
     },[])
     async function handleVerification()
     {
@@ -65,16 +65,16 @@ export default function SignUp()
                     <span className="text-[0.9rem] text-gray-600 dark:text-white">Enter the verification code sent to your email address</span>
                 </div>
                 <div className="m-auto">
-                    <OTPInput 
-                    value={otp} 
-                    onChange={setOtp} 
-                    autoFocus 
-                    OTPLength={6} 
-                    otpType="number" 
-                    disabled={false} 
-                    
-                    inputClassName="border-2 mb-4 outline-none resize-none dark:text-black border-gray-300 rounded-md" />
-                    <ResendOTP onResendClick={() => alert("Resend clicked")} className="text-blue-800 underline dark:text-white" />
+                <OtpInput
+                    value={otp}
+                    onChange={setOtp}
+                    numInputs={6}
+                    shouldAutoFocus={true}
+                    renderSeparator={<span>&nbsp; - &nbsp; </span>}
+                    renderInput={(props) => <input {...props} />}
+                    containerStyle=""
+                    inputStyle="border mb-2 outline-none resize-none dark:text-black border-gray-300 rounded-sm" />
+
                 </div>
                 {
                     verificationError&&<div className="flex items-center justify-center gap-2 mt-4 text-center">
@@ -82,7 +82,7 @@ export default function SignUp()
                     {verificationError}</div>
                 }
                 <div className="text-center">
-                    <button disabled={verificationError} onClick={handleVerification} className="w-full p-2 font-semibold text-white bg-blue-600 rounded-md">Verify</button>
+                    <button disabled={loading} onClick={handleVerification} className="w-full p-2 font-semibold text-white bg-blue-600 rounded-md">Verify</button>
                 </div>
                 
             </div>

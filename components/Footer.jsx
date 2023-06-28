@@ -5,10 +5,10 @@ const Footer = () => {
         <div>
           <ul className="flex items-center justify-center gap-2">
             <li><a href="#"><InstagramLogo size={25} weight="fill" color="#ffffff" /></a></li>
-            <li><a href="#"><TwitterLogo size={25}  weight="fill" color="#ffffff" /></a></li>
+            <li><a href="https://twitter.com/itsAnurag_sri"><TwitterLogo size={25}  weight="fill" color="#ffffff" /></a></li>
             <li><a href="#"><FacebookLogo size={25} weight="fill" color="#ffffff" /></a></li>
-            <li><a href="#"><LinkedinLogo size={25} weight="fill" color="#ffffff" /></a></li>
-            <li><a href="#"><Envelope size={25} weight="fill" color="#ffffff" /></a></li>
+            <li><a href="https://www.linkedin.com/in/anuragsr327/"><LinkedinLogo size={25} weight="fill" color="#ffffff" /></a></li>
+            <li><a href="mailto:anuragsrivastav0027@gmail.com"><Envelope size={25} weight="fill" color="#ffffff" /></a></li>
           </ul>
         </div>      
         <div className="text-center text-gray-300 ">
