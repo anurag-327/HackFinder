@@ -1,34 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# # HackFinder
 
-## Getting Started
+Discover, Connect, and Participate in Hackathons Worldwide!
 
-First, run the development server:
+HackFinder is a powerful platform that allows students and tech enthusiasts to find, explore, and engage in exciting hackathon events globally. Whether you're a coding enthusiast, aspiring developer, or seasoned hacker, HackFinder provides a comprehensive and user-friendly experience to help you make the most of your hackathon journey.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-   **Extensive Hackathon Database**: Access our vast database of hackathons worldwide, ranging from local events to international competitions.
+-   **Easy Search and Filtering**: Effortlessly search for hackathons based on location, date, categories, and more, to find the perfect event for you.
+-   **Community Contributions**: Update existing hackathons or add new ones to ensure our database stays up-to-date and accurate.
+-   **Stay Informed**: Stay up-to-date with the latest hackathon trends, news, and announcements to never miss an opportunity.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Get Started
 
-## Learn More
+1.  Clone the repository: `git clone https://github.com/your-username/hackfinder.git`
+2.  Install dependencies: `npm install`
+3.  Run the application: `npm start`
+4.  Access HackFinder on your preferred browser at `http://localhost:3000`
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+We welcome contributions to enhance the HackFinder platform. If you have any ideas, bug reports, or feature requests, please submit them via GitHub issues. Feel free to fork the repository and submit pull requests as well.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Feedback and Support
 
-## Deploy on Vercel
+If you have any questions, feedback, or need support, please reach out to our team at [anuragsrivastav0027@gmail.com](mailto:anuragsrivastav0027@gmail.com). We're here to help!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+----------
+
+Join the HackFinder community today and embark on an exciting journey of innovation and collaboration. Discover hackathons, connect with fellow hackers, and showcase your skills. Let's revolutionize the world of coding together!
+
+
+![findfest-low-resolution-logo-black-on-white-background](https://github.com/anurag-327/HackFinder/assets/98267696/a93542d4-bc60-43c1-8fcc-ccbb6164718e)
