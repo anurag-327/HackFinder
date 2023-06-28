@@ -22,6 +22,7 @@ HackFinder is a powerful platform that allows students and tech enthusiasts to f
 ## Contributing
 
 We welcome contributions to enhance the HackFinder platform. If you have any ideas, bug reports, or feature requests, please submit them via GitHub issues. Feel free to fork the repository and submit pull requests as well.
+You can also contribute by adding new hackathons to our database.visit [https://hackfinder.vercel.app/contribute](https://hackfinder.vercel.app/contribute) to add new hackathons. Hackathon will be added to database once we verify at our end.
 
 ## Feedback and Support
 
