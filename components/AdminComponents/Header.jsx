@@ -31,27 +31,27 @@ const Header = ({setSection,section}) => {
             <X onClick={closeDrawer} className="absolute cursor-pointer md:hidden right-2" size={30} weight="bold" color="#ffffff" />
         </div>
         <div className="flex flex-col items-center gap-3 mt-20 font-sans">
-            <button onClick={()=> setSection("dashboard")} className={`flex items-center justify-start w-full gap-2 p-2 ${section==="dashboard"&&"bg-gray-700"}  rounded-md hover:bg-gray-500 `}>
+            <button onClick={()=> {setSection("dashboard");document.getElementById("adminDrawer").classList.add("hidden")}} className={`flex items-center justify-start w-full gap-2 p-2 ${section==="dashboard"&&"bg-gray-700"}  rounded-md hover:bg-gray-500 `}>
                 <Command size={32} color="#ffffff" weight="fill" />
                 <span className="font-semibold">Dashboard</span>
             </button>
-            <button onClick={()=> setSection("verify")} className={`flex items-center justify-start w-full gap-2 p-2   ${section==="verify"&&"bg-gray-700"} rounded-md bg-gray-70 hover:bg-gray-500 `}>
+            <button onClick={()=> {setSection("verify");document.getElementById("adminDrawer").classList.add("hidden")}} className={`flex items-center justify-start w-full gap-2 p-2   ${section==="verify"&&"bg-gray-700"} rounded-md bg-gray-70 hover:bg-gray-500 `}>
                 <CheckCircle size={26} color="#ffffff" weight="fill" />
                 <span className="font-semibold">verify</span>
             </button>
-            <button onClick={()=> setSection("topcontributors")} className={`flex items-center justify-start w-full gap-2 p-2  ${section==="topcontributors"&&"bg-gray-700"} rounded-md bg-gray-70 hover:bg-gray-500`}>
+            <button onClick={()=> {setSection("topcontributors");document.getElementById("adminDrawer").classList.add("hidden")}} className={`flex items-center justify-start w-full gap-2 p-2  ${section==="topcontributors"&&"bg-gray-700"} rounded-md bg-gray-70 hover:bg-gray-500`}>
                 <MicrosoftTeamsLogo size={26} color="#ffffff" weight="fill" />
                 <span className="font-semibold">Top Contributors</span>
             </button>
-            <button onClick={()=> setSection("profile")} className={`flex items-center justify-start w-full gap-2 p-2  ${section==="profile"&&"bg-gray-700"} rounded-md bg-gray-70 hover:bg-gray-500`}>
+            <button onClick={()=> {setSection("profile");document.getElementById("adminDrawer").classList.add("hidden")}} className={`flex items-center justify-start w-full gap-2 p-2  ${section==="profile"&&"bg-gray-700"} rounded-md bg-gray-70 hover:bg-gray-500`}>
                 <User size={26} color="#ffffff" weight="regular" />
                 <span className="font-semibold">Profile</span>
             </button>
-            <button onClick={()=> setSection("addadmin")} className={`flex items-center justify-start w-full gap-2 p-2  ${section==="addadmins"&&"bg-gray-700"} rounded-md bg-gray-70 hover:bg-gray-500`}>
+            <button onClick={()=> {setSection("addadmin");document.getElementById("adminDrawer").classList.add("hidden")}} className={`flex items-center justify-start w-full gap-2 p-2  ${section==="addadmins"&&"bg-gray-700"} rounded-md bg-gray-70 hover:bg-gray-500`}>
                 <UserPlus size={26} color="#ffffff" weight="regular" />
                 <span className="font-semibold">Add Admins</span>
             </button>
-            <button onClick={()=> setSection("settings")} className={`flex items-center justify-start w-full gap-2 p-2  ${section==="settings"&&"bg-gray-700"} rounded-md bg-gray-70 hover:bg-gray-500`}>
+            <button onClick={()=> {setSection("settings");document.getElementById("adminDrawer").classList.add("hidden")}} className={`flex items-center justify-start w-full gap-2 p-2  ${section==="settings"&&"bg-gray-700"} rounded-md bg-gray-70 hover:bg-gray-500`}>
                 <GearSix size={26} color="#ffffff" weight="fill" />
                 <span className="font-semibold">Settings</span>
             </button>
