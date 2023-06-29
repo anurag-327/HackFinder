@@ -7,12 +7,15 @@ const HackathonCard = ({data}) => {
   
   const Completionist = () => <span className='font-bold text-center text-red-700'>Expired!</span>;
     return (
-    <div className="md:w-[300px] min-w-[300px] w-[80%] rounded-md text-black  bg-white justify-center">
+    <div className="md:w-[300px] min-w-[300px] w-[90%] rounded-md text-black  bg-white justify-center">
       <Image className="mx-auto rounded-md" src="/ImageError.webp" width={200} height={200} alt="data"/>
       <div className="flex flex-col gap-1 p-2 text-justify">
         <div className='flex items-center justify-center gap-2'>
         <h2 className="inline text-2xl font-bold text-center">{data.name}</h2>
+        {
+          data.verified===true&&
         <CheckCircle className='inline' size={20} color="#423fde" weight="fill" />
+        }
 
         </div>
         {/* <p className='p-1 mx-auto font-light text-center bg-gray-300 rounded-md '>{data.description}</p> */}

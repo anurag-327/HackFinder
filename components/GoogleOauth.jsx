@@ -12,7 +12,6 @@ export default function GoogleOauth({callback_url})
                     redirectTo:callback_url
                 }
               })
-              console.log(data,error) 
         } catch (error) {
             console.log(error)  
         }

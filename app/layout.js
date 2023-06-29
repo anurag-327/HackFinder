@@ -11,7 +11,7 @@ import Footer from '@/components/Footer'
 import Router from 'next/router'
 export default function RootLayout({ children }) 
 {
-  const {user,setUser,session,setSession,globalLoading,setGlobalLoading,initializeHackathons}=useStore();
+  const {user,isAdmin,setAdmin,setUser,session,setSession,globalLoading,setGlobalLoading,initializeHackathons}=useStore();
   useEffect(()=>
   {
        try {
@@ -20,12 +20,13 @@ export default function RootLayout({ children })
             const value1 = await supabase.auth.getUser()
             setUser(value1.data.user)
             const value2 = await supabase.auth.getSession();
-            // console.log(value1.data.user)
             setSession(value2.data.session)
+            
+            
             const { data, error } = await supabase
                     .from('Hackathons')
                     .select()
-                    .order('created_at', { ascending: false })
+                    .order('applyBefore', { ascending: true })
             if(data)
             {
               initializeHackathons(data)
@@ -55,7 +56,7 @@ export default function RootLayout({ children })
           </main>):(
             <>
               {children} 
-              <Footer />
+              {/* <Footer /> */}
             </>
           )
       }

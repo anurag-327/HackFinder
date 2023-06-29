@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 export default function Header()
 {
-    const {user,setUser,resetUser,session,setSession,resetSession}=useStore();
+    const {user,isAdmin,setAdmin,setUser,resetUser,session,setSession,resetSession}=useStore();
     const router=useRouter();
     function openDrawer()
     {
@@ -24,8 +24,33 @@ export default function Header()
         {
             resetSession();
             resetUser();
+            setAdmin(false);
         }
     }
+    useEffect(() => {
+        
+          (async function()
+          {
+            if(user)
+            {
+
+                const admin=await supabase
+                .from('admins')
+                .select()
+                .eq('user_id', user.id)
+                
+                if(admin.data.length>0)
+                {
+                    setAdmin(true);
+                }
+            }
+          }())
+          
+        
+    
+      
+    }, [])
+    
     return(
         <nav className="sticky top-0 z-30 flex items-center bg-[#050b13] justify-between gap-2 md:px-3">
             <div className="flex items-center justify-center gap-2">
@@ -50,6 +75,16 @@ export default function Header()
                       Contribute
                     </span>
                 </a>
+                {
+                    isAdmin&&(
+                    <a className="text-lg transition-all duration-300 ease-in-out md:text-sm text-md group" href="/admin">
+                             <span className="bg-left-bottom bg-gradient-to-r bg-transparent from-blue-200 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                              dashboard
+                            </span>
+                    </a>
+                    )
+                }
+                
                 {/* <input className="px-2 py-[1px] outline-none resize-none text-white bg-transparent  border-2 border-gray-400 focus:bg-white rounded-md" type="text" placeholder="Search"/> */}
                 {
                     (user==null&&session==null)?(<>
