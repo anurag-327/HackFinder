@@ -1,8 +1,9 @@
-
+"use client"
 import Header from "@/components/Header";
 import Banner from "@/components/Banner";
 import Card from "@/components/miniComponents/Card";
 import FAQ from "../components/FAQ";
+import Footer from "@/components/Footer";
 export default function Home()
 {
    const FindnextHackathon={
@@ -82,6 +83,7 @@ export default function Home()
             <Card data={ContributeToCommunity} />             
         </div> 
         <FAQ />
+        <Footer />
     </main>
   )
 }

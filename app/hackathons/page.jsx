@@ -1,4 +1,5 @@
 "use client"
+import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import HackathonCard from "@/components/miniComponents/HackathonCard"
 import { useStore } from "@/lib/useStore"
@@ -17,6 +18,7 @@ const Hackathon = () => {
             verifiedHackathons.map(data=> <HackathonCard key={data.id} data={data}/>)
           }
         </div>
+        <Footer />
     </>
   )
 }
