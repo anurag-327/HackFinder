@@ -52,7 +52,7 @@ export default function Header()
     }, [])
     
     return(
-        <nav className="sticky top-0 z-30 flex items-center bg-[#050b13] justify-between gap-2 md:px-3">
+        <nav className="sticky px-1 top-0 z-30 flex items-center bg-[#050b13] justify-between gap-2 md:px-3">
             <div className="flex items-center justify-center gap-2">
                 <Image src="/logo.png" width={50} height={40} alt="HackFinder"  className="rounded-full"/>
                 <h2 className="hidden font-semibold font-poppins md:block">HackFinder</h2>
