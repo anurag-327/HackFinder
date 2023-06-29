@@ -9,8 +9,6 @@ const Profile = () => {
   console.log(user)
   return (
     <>
-      {/* <Breadcrumb pageName="Profile" /> */}
-
       <div className="px-1 py-4 overflow-hidden min-h-[85vh] bg-white border rounded-sm border-stroke shadow-default ">
         <div className="relative h-35 md:h-65">
           <img
