@@ -9,8 +9,7 @@ export default function GitlabOauth()
                 options:{
                     redirectTo:"http://localhost:3000/"
                 }
-              })
-              console.log(data,error)  
+              })  
         } catch (error) {
             console.log(error) 
         }

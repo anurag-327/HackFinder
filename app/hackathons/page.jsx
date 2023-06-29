@@ -14,7 +14,7 @@ const Hackathon = () => {
         </div>
         <div className="flex flex-wrap items-stretch justify-center gap-4 px-10 mt-10">
           {
-            verifiedHackathons.map(data=> <HackathonCard data={data}/>)
+            verifiedHackathons.map(data=> <HackathonCard key={data.id} data={data}/>)
           }
         </div>
     </>
