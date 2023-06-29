@@ -28,7 +28,7 @@ const Header = ({setSection,section}) => {
        <div className="relative flex items-center justify-start gap-2">
             <Image src="/logo.png" width={50} height={40} alt="HackFinder"  className="rounded-full"/>
             <h2 className="text-lg font-semibold font-poppins">HackFinder</h2>
-            <X onClick={closeDrawer} className="absolute cursor-pointer right-2" size={30} weight="bold" color="#ffffff" />
+            <X onClick={closeDrawer} className="absolute cursor-pointer md:hidden right-2" size={30} weight="bold" color="#ffffff" />
         </div>
         <div className="flex flex-col items-center gap-3 mt-20 font-sans">
             <button onClick={()=> setSection("dashboard")} className={`flex items-center justify-start w-full gap-2 p-2 ${section==="dashboard"&&"bg-gray-700"}  rounded-md hover:bg-gray-500 `}>
