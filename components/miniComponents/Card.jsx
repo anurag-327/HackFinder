@@ -7,7 +7,7 @@ const Card = ({data}) => {
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true }}
-    className="z-10 flex flex-col min-h-[300px] shadow-md shadow-gray-200  mx-auto  justify-center items-center text-black rounded-md md:gap-5 bg-slate-200 p-4 md:flex-row w-[95%] md:w-[85%]">
+    className="z-10 flex flex-col min-h-[300px]   mx-auto  justify-center items-center text-white rounded-md md:gap-5 bg-[#111010] border border-gray-600 px-4 py-8 md:flex-row w-[95%] md:w-[85%]">
         {
             data.id==1&&<Image className={`${data.reverse&&"md:order-2"} rounded-md`} src="/FindNextHackathon.png" width={400} height={400} alt={data.title} />
         }
@@ -25,7 +25,7 @@ const Card = ({data}) => {
         }
         <div className={`${data.reverse&&"md:order-1"} p-2 flex flex-col`}>
             <h2 className="text-3xl font-bold text-center md:text-5xl">{data.title}</h2>
-            <p className="mt-4 text-sm font-semibold text-justify text-gray-800 first-letter:text-3xl xl:px-10 ">{data.description}</p>
+            <p className="mt-4 text-sm font-semibold text-justify text-white first-letter:text-3xl xl:px-10 ">{data.description}</p>
             {
                 data.explorebtn&&
                     <a href="/hackathons" className="px-5 py-2 mx-auto font-bold text-white duration-300 transform bg-blue-700 rounded-full hover:bg-blue-500 mt-7">Explore Hackathons

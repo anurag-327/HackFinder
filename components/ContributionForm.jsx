@@ -37,7 +37,7 @@ const ContributionForm = () => {
             url:value.url,
             user_id:user.id,
             tags:tags,
-            verified:false,
+            verified:true,
             addedBy:user.user_metadata.full_name
         }
         const { data, error } = await supabase

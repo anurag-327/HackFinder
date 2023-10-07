@@ -2,11 +2,17 @@
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import HackathonCard from "@/components/miniComponents/HackathonCard"
+import HackathonTable from "@/components/miniComponents/HackathonTable"
 import { useStore } from "@/lib/useStore"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 const Hackathon = () => {
   const {hackathons}=useStore();
   const [verifiedHackathons,setVerifiedhackathons]=useState(hackathons.filter(data => data.verified===true));
+
+  verifiedHackathons.sort(function(a,b){
+     return new Date(b.applyBefore) - new Date(a.applyBefore)
+  })
+
   return (
     <>
         <Header />
@@ -16,6 +22,9 @@ const Hackathon = () => {
         <div className="flex flex-wrap items-stretch justify-center gap-4 px-10 mt-10">
           {
             verifiedHackathons.map(data=> <HackathonCard key={data.id} data={data}/>)
+          }
+          {
+            <HackathonTable data={verifiedHackathons} />
           }
         </div>
         <Footer />

@@ -21,8 +21,6 @@ export default function RootLayout({ children })
             setUser(value1.data.user)
             const value2 = await supabase.auth.getSession();
             setSession(value2.data.session)
-            
-            
             const { data, error } = await supabase
                     .from('Hackathons')
                     .select()
@@ -31,6 +29,9 @@ export default function RootLayout({ children })
             {
               initializeHackathons(data)
             }
+            
+             
+            
             setGlobalLoading(false)
           }())  
         } catch (error) {
@@ -44,8 +45,8 @@ export default function RootLayout({ children })
   return (
     <html lang="en">
       <head>
+        <link rel="icon" type="image" href='/bino-dark.svg'></link>
         <title>HackFinder</title>
-        <link rel="icon" href='/favicon.png'></link>
       </head>
       <body className={inter.className +" bg-gradient-to-r from-[#050b13] via-[#080421] to-[#000000] text-white"}>
       {

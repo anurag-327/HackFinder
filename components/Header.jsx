@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import { useStore } from "@/lib/useStore"
-import {UserPlus, UserCircle, List, X} from "phosphor-react"
+import {UserPlus, UserCircle, List, X, CodeBlock} from "phosphor-react"
 import { supabase } from "@/supabase/supabseconfig";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
@@ -52,9 +52,9 @@ export default function Header()
     }, [])
     
     return(
-        <nav className="sticky px-1 top-0 z-30 flex items-center bg-[#050b13] justify-between gap-2 md:px-3">
+        <nav className="sticky px-1 py-2 top-0 z-30 flex items-center bg-[#050b13] justify-between gap-2 md:px-3">
             <div className="flex items-center justify-center gap-2">
-                <Image src="/logo.png" width={50} height={40} alt="HackFinder"  className="rounded-full"/>
+                <img src="https://github.com/anurag-327/HackFinder/assets/98267696/124640d5-2bf0-4d07-b1b9-8d40c819bbe0" width={40} height={40} alt="HackFinder"  className="rounded-full"/>
                 <h2 className="hidden font-semibold font-poppins md:block">HackFinder</h2>
             </div>
             <List onClick={openDrawer} className="cursor-pointer navList md:hidden" size={40} weight="bold" fil="#fffffff"/>
